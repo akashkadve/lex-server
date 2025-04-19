@@ -1,7 +1,7 @@
 import { User } from "../Models/Models.js";
 
 //post
-export const create = async (req, res) => {
+export default create = async (req, res) => {
   try {
     const UserData = new User(req.body);
     if (!UserData) {
