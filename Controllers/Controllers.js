@@ -1,7 +1,7 @@
 import { User } from "../Models/Models.js";
 
 //post
-export default create = async (req, res) => {
+const create = async (req, res) => {
   try {
     const UserData = new User(req.body);
     if (!UserData) {
@@ -13,3 +13,5 @@ export default create = async (req, res) => {
     res.status(500).json({ error: error });
   }
 };
+
+export default create;
